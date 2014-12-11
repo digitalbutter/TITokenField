@@ -1200,7 +1200,7 @@ CGPathRef CGPathCreateDisclosureIndicatorPath(CGPoint arrowPointFront, CGFloat h
         CGFloat accessoryImageWidth = self.accessoryImage.size.width;
         if (self.highlightedAccessoryImage.size.width > accessoryImageWidth)
             accessoryImageWidth = self.highlightedAccessoryImage.size.width;
-        accessoryWidth += floorf(accessoryImageWidth) + size.height / 3;
+        accessoryWidth += floorf(accessoryImageWidth) + floorf(_hTextPadding / 4);
     }
 	
 	CGSize titleSize = [_title sizeWithFont:_font forWidth:(_maxWidth - _hTextPadding - accessoryWidth) lineBreakMode:kLineBreakMode];
