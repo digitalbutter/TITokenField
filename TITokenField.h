@@ -124,6 +124,7 @@ typedef enum {
 typedef enum {
 	TITokenAccessoryTypeNone = 0, // Default
 	TITokenAccessoryTypeDisclosureIndicator = 1,
+    TITokenAccessoryTypeImage = 2,
 } TITokenAccessoryType;
 
 @interface TIToken : UIControl
@@ -133,6 +134,8 @@ typedef enum {
 @property (nonatomic, strong) UIColor * textColor UI_APPEARANCE_SELECTOR;
 @property (nonatomic, strong) UIColor * highlightedTextColor UI_APPEARANCE_SELECTOR;
 @property (nonatomic, strong) UIColor * tintColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong) UIImage * accessoryImage;
+@property (nonatomic, strong) UIImage * highlightedAccessoryImage;
 @property (nonatomic, assign) TITokenAccessoryType accessoryType;
 @property (nonatomic, assign) CGFloat maxWidth;
 @property (nonatomic, assign) CGFloat hTextPadding;
